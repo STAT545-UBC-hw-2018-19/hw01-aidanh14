@@ -11,9 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-In the file, we're going try playing around with a couple of datasets.
+In the file, we're going try playing around with a couple of datasets. We'll start with Gapminder like we did in class, and then move onto some of the built-in datasets in R that are available to us.
 
-##Let's get it started
+##Let's Get Started - Gapminder
 
 We're going to start with the Gapminder data frame to try out some R functions.
 
@@ -39,10 +39,14 @@ US_data <- gapminder[gapminder$country == "United States",]
 # Define identical Y limits for the datasets
 ylims <- c(50,90)
 
-plot(CAN_data$year, CAN_data$lifeExp, ylim=ylims, col="blue", pch=19, ylab="Life Expentancy (years)", xlab="Date")
+plot(CAN_data$year, CAN_data$lifeExp, ylim=ylims, col="blue", pch=19,main="Life Expectancy of Canadians vs. Americans", ylab="Life Expentancy (years)", xlab="Date")
 par(new=TRUE)
 plot(US_data$year, US_data$lifeExp, ylim=ylims, ylab="", xlab="", col="red", pch=19)
-legend(x=1955,y=90, legend=c("Canada", "United States"),col=c("red", "blue"), fill=c("red", "blue"))
+legend(x=1955,y=90, legend=c("Canada", "United States"),col=c("red", "blue"), fill=c("red", "blue"), bg="lightgrey")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Well, I was hoping Canada would do better than the States in this category but I guess not. Let's move on, shall we?
+
+##Built-in Datasets
+
+There's plenty of built-in datasets in R meant just for this purpose - getting used to R. 

@@ -53,11 +53,8 @@ any(gapminder=="United States")
 ## [1] TRUE
 ```
 
-
-
-
 Great, now lets compare the two in a nice plot.
 
 ![](hw01_gapminder_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Well, I was hoping Canada would do better than the States in this categtory. 
