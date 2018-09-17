@@ -1,0 +1,48 @@
+---
+title: "STAT 545A - Exploring Datasets"
+author: "Aidan Hughes"
+output:
+  html_document:
+    theme: cerulean
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In the file, we're going try playing around with a couple of datasets.
+
+##Let's get it started
+
+We're going to start with the Gapminder data frame to try out some R functions.
+
+```{r}
+library(gapminder)
+
+head(gapminder)
+```
+
+So it looks like we have a bunch of data on some countries. Let's see if we have anything on our favorite countries, Canada and the US.
+
+```{r}
+any(gapminder=="Canada")
+any(gapminder=="United States")
+```
+
+Great, now lets compare the two in a nice plot.
+
+```{r, echo=FALSE}
+CAN_data <- gapminder[gapminder$country == "Canada",]
+US_data <- gapminder[gapminder$country == "United States",]
+
+# Define identical Y limits for the datasets
+ylims <- c(50,90)
+
+plot(CAN_data$year, CAN_data$lifeExp, ylim=ylims, col="blue", pch=19, ylab="Life Expentancy (years)", xlab="Date")
+par(new=TRUE)
+plot(US_data$year, US_data$lifeExp, ylim=ylims, ylab="", xlab="", col="red", pch=19)
+legend(x=1955,y=90, legend=c("Canada", "United States"),col=c("red", "blue"), fill=c("red", "blue"))
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
