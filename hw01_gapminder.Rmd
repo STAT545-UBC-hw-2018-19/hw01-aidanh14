@@ -17,9 +17,12 @@ In the file, we're going try playing around with a couple of datasets. We'll sta
 
 We're going to start with the Gapminder data frame to try out some R functions.
 
-```{r}
+```{r echo=FALSE}
 library(gapminder)
 
+```
+
+```{r}
 head(gapminder)
 ```
 
@@ -39,7 +42,7 @@ US_data <- gapminder[gapminder$country == "United States",]
 # Define identical Y limits for the datasets
 ylims <- c(50,90)
 
-plot(CAN_data$year, CAN_data$lifeExp, ylim=ylims, col="blue", pch=19,main="Life Expectancy of Canadians vs. Americans", ylab="Life Expentancy (years)", xlab="Date")
+plot(CAN_data$year, CAN_data$lifeExp, ylim=ylims, col="blue", pch=19,main="Life Expectancy of Canada vs. The United States", ylab="Life Expentancy (years)", xlab="Date")
 par(new=TRUE)
 plot(US_data$year, US_data$lifeExp, ylim=ylims, ylab="", xlab="", col="red", pch=19)
 legend(x=1955,y=90, legend=c("Canada", "United States"),col=c("red", "blue"), fill=c("red", "blue"), bg="lightgrey")
@@ -49,4 +52,12 @@ Well, I was hoping Canada would do better than the States in this category but I
 
 ##Built-in Datasets
 
-There's plenty of built-in datasets in R meant just for this purpose - getting used to R. 
+There's plenty of built-in datasets meant just for this purpose - getting used to R. 
+Because I found out how to do it on the internet, let's plot the surface graph of a volcano!
+
+```{r, echo=FALSE}
+library(plotly)
+p <- plot_ly(z = ~volcano) %>% add_surface()
+p
+```
+
