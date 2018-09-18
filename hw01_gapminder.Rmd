@@ -2,8 +2,8 @@
 title: "STAT 545A - Exploring Datasets"
 author: "Aidan Hughes"
 output:
-  html_document:
-    theme: cerulean
+  prettydoc::html_pretty:
+    theme: Architect
     keep_md: true
 ---
 
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In the file, we're going try playing around with a couple of datasets. We'll start with Gapminder like we did in class, and then move onto some of the built-in datasets in R that are available to us.
 
-##Let's Get Started - Gapminder
+## Let's Get Started - Gapminder
 
 We're going to start with the Gapminder data frame to try out some R functions.
 
@@ -26,7 +26,7 @@ library(gapminder)
 head(gapminder)
 ```
 
-So it looks like we have a bunch of data on some countries. Let's see if we have anything on our favorite countries, Canada and the US.
+So it looks like we have a bunch of data on some countries. Let's see if we have anything on our favorite countries, Canada and the US, using the `any()` function.
 
 ```{r}
 any(gapminder=="Canada")
@@ -50,14 +50,9 @@ legend(x=1955,y=90, legend=c("Canada", "United States"),col=c("red", "blue"), fi
 
 Well, I was hoping Canada would do better than the States in this category but I guess not. Let's move on, shall we?
 
-##Built-in Datasets
+## Built-in Datasets
 
 There's plenty of built-in datasets meant just for this purpose - getting used to R. 
-Because I found out how to do it on the internet, let's plot the surface graph of a volcano!
+Because I found out how to do it on the internet, let's plot the surface graph of a volcano! (Try clicking and dragging)
 
-```{r, echo=FALSE}
-library(plotly)
-p <- plot_ly(z = ~volcano) %>% add_surface()
-p
-```
-
+### Well, I hope this is enough for a reasonable grade. Thanks for your time!
