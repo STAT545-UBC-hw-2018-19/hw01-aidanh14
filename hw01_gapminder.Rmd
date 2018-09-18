@@ -2,9 +2,7 @@
 title: "STAT 545A - Exploring Datasets"
 author: "Aidan Hughes"
 output:
-  html_document:
-    theme: cosmo
-    keep_md: true
+  github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -56,8 +54,8 @@ There's plenty of built-in datasets meant just for this purpose - getting used t
 Because I found out how to do it on the internet, let's plot the surface graph of a volcano!
 
 ```{r}
-#--- This code block renders a 3D surface plot of a volcano, but adds about 4mb to the file so I have omitted it.
-#--- It does work though, take my word.
+#--- This code block renders a 3D surface plot of a volcano, but unfortunately only works with output as HTML so I have omitted it. #--- It also adds about 4mb to the file. It does work though, take my word.
+
 #library(plotly)
 #p <- plot_ly(z = ~volcano) %>% add_surface()
 #p
