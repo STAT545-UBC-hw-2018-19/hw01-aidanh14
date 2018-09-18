@@ -53,6 +53,14 @@ Well, I was hoping Canada would do better than the States in this category but I
 ## Built-in Datasets
 
 There's plenty of built-in datasets meant just for this purpose - getting used to R. 
-Because I found out how to do it on the internet, let's plot the surface graph of a volcano! (Try clicking and dragging)
+Because I found out how to do it on the internet, let's plot the surface graph of a volcano!
+
+```{r}
+#--- This code block renders a 3D surface plot of a volcano, but adds about 4mb to the file so I have omitted it.
+#--- It does work though, take my word.
+#library(plotly)
+#p <- plot_ly(z = ~volcano) %>% add_surface()
+#p
+```
 
 ### Well, I hope this is enough for a reasonable grade. Thanks for your time!
