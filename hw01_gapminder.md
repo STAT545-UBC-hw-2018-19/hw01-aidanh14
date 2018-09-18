@@ -2,8 +2,8 @@
 title: "STAT 545A - Exploring Datasets"
 author: "Aidan Hughes"
 output:
-  prettydoc::html_pretty:
-    theme: Architect
+  html_document:
+    theme: cosmo
     keep_md: true
 ---
 
